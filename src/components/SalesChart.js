@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { memo } from 'react';
+
 import {
   LineChart,
   Line,
@@ -19,7 +20,7 @@ const data = [
   { name: 'Jun', vendas: 2390, estoque: 3800 },
 ];
 
-const SalesChart = () => {
+const SalesChart = memo(() => {
   return (
     <ResponsiveContainer width="100%" height="100%">
       <LineChart
@@ -46,6 +47,6 @@ const SalesChart = () => {
       </LineChart>
     </ResponsiveContainer>
   );
-};
+});
 
 export default SalesChart;

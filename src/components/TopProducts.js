@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { memo } from 'react';
+
 import {
   List,
   ListItem,
@@ -41,7 +42,8 @@ const topProducts = [
   },
 ];
 
-const TopProducts = () => {
+const TopProducts = memo(() => {
+  // This component displays the top products
   return (
     <List sx={{ width: '100%', bgcolor: 'background.paper', p: 0 }}>
       {topProducts.map((product, index) => (
@@ -107,6 +109,6 @@ const TopProducts = () => {
       ))}
     </List>
   );
-};
+});
 
 export default TopProducts;

@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { memo } from 'react';
+
 import {
   Table,
   TableBody,
@@ -70,7 +71,7 @@ const getStatusColor = (status) => {
   }
 };
 
-const InventoryTable = () => {
+const InventoryTable = memo(() => {
   return (
     <TableContainer>
       <Table sx={{ minWidth: 650 }} aria-label="inventory table">
@@ -151,6 +152,6 @@ const InventoryTable = () => {
       </Table>
     </TableContainer>
   );
-};
+});
 
 export default InventoryTable;
